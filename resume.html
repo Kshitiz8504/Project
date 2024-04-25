@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      html {
+        height: 850px;
+      }
+      #resume-body {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #resume-body-content {
+        height: 90%;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+      }
+      .resume-body-column {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+      }
+      .resume-list > ul {
+        margin: 20px 0 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        border-left: 2px cadetblue solid;
+      }
+      .resume-list > ul > li {
+        margin: 0;
+        padding: 0 0 10px 20px;
+      }
+      .resume-list > ul > li > ul {
+        display: flex;
+        flex-direction: column;
+        list-style: disc;
+        margin-left: 15px;
+      }
+      .resume-list > ul > li > ul > li {
+        margin: 0;
+        padding: 5px;
+      }
+      .resume-list > ul > li > ul > li > ul {
+        margin: 0;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+      }
+      .resume-head2-1::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50px;
+        left: -10px;
+        top: -1px;
+        background: #fff;
+        border: 2px solid #1f5297;
+      }
+      .resume-head2-2::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50px;
+        left: -30px;
+        top: 0px;
+        background: #fff;
+        border: 2px solid #1f5297;
+      }
+      #resume-list-2,
+      #resume-list-2 > ul > li > ul {
+        display: flex;
+        flex-direction: column;
+      }
+      #resume-list-2 > ul {
+        border-left: 2px cadetblue solid;
+      }
+      #resume-list-2 > ul > li > ul > li {
+        position: relative;
+        margin: 0;
+        padding: 5px;
+      }
+      #resume-list-2 > ul > li > ul > li > ul {
+        display: flex;
+        flex-direction: column;
+        list-style: disc;
+        margin-left: 15px;
+      }
+      #resume-list-2 > ul > li > ul > li > ul > li {
+        margin: 0;
+        padding: 0 0 10px 0;
+      }
+      #resume-list-2 > ul {
+        display: flex;
+        flex-direction: column;
+      }
+      #resume-list-2 > ul > li {
+        margin: 0;
+        padding: 0 0 10px 20px;
+      }
+      .resume-list > ul > li {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <nav id="navbar">
+        <div id="logo">
+          <a href="#"
+            ><img
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.iDYXq3As-rn3ms_zQwQ-6gHaDj%26pid%3DApi&f=1&ipt=5bff6f9b2524e5851499135e2db9fd1f95d1033ce23e89f47698904254d0e9d4&ipo=images"
+              alt="Name/Logo"
+          /></a>
+        </div>
+        <div id="sites">
+          <ul>
+            <li><a href="project.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div id="close"><p>x</p></div>
+      </nav>
+      <div id="body">
+        <div id="resume-body">
+          <h2>My Resume</h2>
+          <div id="resume-body-content">
+            <div class="resume-body-column">
+              <h2>Summary</h2>
+              <div class="resume-list">
+                <ul>
+                  <li><h3 class="resume-head2-1">KSHITIJRAJ</h3></li>
+                  <li>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Asperiores, accusantium ut, aspernatur nisi, rem ea mollitia
+                    autem nemo quo dolores labore magni nihil dolorem ipsa
+                    obcaecati provident aliquid vitae incidunt.
+                  </li>
+                  <li>
+                    <ul>
+                      <li>(+91) 1234 567 90</li>
+                      <li>kshitijraj.2022@vitstudent.ac.in</li>
+                      <li>Kissinger Rd, Vellore, TN</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <br />
+              <h2>Education</h2>
+              <div class="resume-list">
+                <ul>
+                </ul>
+                <ul>
+                  <li><h3 class="resume-head2-1">MASTER OF</h3></li>
+                  <li>20XX - 20XX</li>
+                  <li>Lorem dolor, sit consectetur, adipisicing</li>
+                  <li>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quasi distinctio dolorem hic nam ad modi obcaecati sapiente
+                    repudiandae ut quia. Quod voluptates vel, quae ratione
+                    fugiat itaque iure quos unde!
+                  </li>
+                </ul>
+                <ul>
+                  <li><h3 class="resume-head2-1">MASTER OF</h3></li>
+                  <li>20XX - 20XX</li>
+                  <li>Lorem dolor, sit consectetur, adipisicing</li>
+                  <li>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quasi distinctio dolorem hic nam ad modi obcaecati sapiente
+                    repudiandae ut quia. Quod voluptates vel, quae ratione
+                    fugiat itaque iure quos unde!
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="resume-body-column">
+              <h2>Professional Experience</h2>
+              <div id="resume-list-2">
+                <ul>
+                  <li>
+                    <ul>
+                      <li><h3 class="resume-head2-2">Lorem ipsum dolor</h3></li>
+                      <li>20XX - 20XX</li>
+                      <li>Lorem, Lorem ipsum</li>
+                      <li>
+                        <ul>
+                          <li>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Sapiente vitae molestiae beatae ipsa! Nesciunt
+                            dolor non, architecto sapiente delectus vero!
+                          </li>
+                          <li>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Sapiente vitae molestiae beatae ipsa! Nesciunt
+                            dolor non, architecto sapiente delectus vero!
+                          </li>
+                          <li>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Sapiente vitae molestiae beatae ipsa! Nesciunt
+                            dolor non, architecto sapiente delectus vero!
+                          </li>
+                          <li>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Sapiente vitae molestiae beatae ipsa! Nesciunt
+                            dolor non, architecto sapiente delectus vero!
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li><h3 class="resume-head2-2">Lorem ipsum dolor</h3></li>
+                      <li>20XX - 20XX</li>
+                      <li>Lorem, Lorem ipsum</li>
+                      <li>
+                        <ul>
+                          <li>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Sapiente vitae molestiae beatae ipsa! Nesciunt
+                            dolor non, architecto sapiente delectus vero!
+                          </li>
+                          <li>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Sapiente vitae molestiae beatae ipsa! Nesciunt
+                            dolor non, architecto sapiente delectus vero!
+                          </li>
+                          <li>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Sapiente vitae molestiae beatae ipsa! Nesciunt
+                            dolor non, architecto sapiente delectus vero!
+                          </li>
+                          <li>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Sapiente vitae molestiae beatae ipsa! Nesciunt
+                            dolor non, architecto sapiente delectus vero!
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

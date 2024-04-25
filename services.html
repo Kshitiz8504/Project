@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      #services {
+        height: 100%;
+        width: 100%;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+      }
+      #services-body {
+        height: 90%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      #service-row1,
+      #service-row2 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 20px;
+      }
+      .services-tiles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 5px;
+        padding: 10px;
+      }
+      .services-tiles p {
+        text-align: center;
+      }
+      .services-tiles:hover {
+        background: cadetblue;
+      }
+      .services-tiles:hover #image1 {
+        background-color: blue;
+      }
+      .services-tiles:hover #image2 {
+        background-color: orange;
+      }
+      .services-tiles:hover #image3 {
+        background-color: maroon;
+      }
+      .services-tiles:hover #image4 {
+        background-color: orangered;
+      }
+      .services-tiles:hover #image5 {
+        background-color: red;
+      }
+      .services-tiles:hover #image6 {
+        background-color: seagreen;
+      }
+      .services-tiles:hover {
+        transition: 0.5s;
+        transition-timing-function: ease-in-out;
+      }
+      .services-tiles .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70%;
+        border-radius: 100%;
+        padding: 25px;
+      }
+      .image img {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <nav id="navbar">
+        <div id="logo">
+          <a href="#"
+            ><img
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.iDYXq3As-rn3ms_zQwQ-6gHaDj%26pid%3DApi&f=1&ipt=5bff6f9b2524e5851499135e2db9fd1f95d1033ce23e89f47698904254d0e9d4&ipo=images"
+              alt="Name/Logo"
+          /></a>
+        </div>
+        <div id="sites">
+          <ul>
+            <li><a href="project.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div id="close"><p>x</p></div>
+      </nav>
+      <div id="body">
+        <div id="services">
+          <h2>Service</h2>
+          <div id="services-body">
+            <div id="service-row1">
+              <div class="services-tiles">
+                <div class="image" id="image1">
+                  <img
+                    src="img\9845927_article_blog_blogging_content_documents_icon.png"
+                    alt=""
+                  />
+                </div>
+                <h2>WEB DESIGN</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloremque, quo!
+                </p>
+              </div>
+              <div class="services-tiles">
+                <div class="image" id="image2">
+                  <img
+                    src="img/2528126_code_coding_developer_development_online_icon.png"
+                    alt=""
+                  />
+                </div>
+                <h2>WEB DEVELOPMENT</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloremque, quo!
+                </p>
+              </div>
+              <div class="services-tiles">
+                <div class="image" id="image3">
+                  <img
+                    src="img/9845932_account_browser_login_sign_in_icon.png"
+                    alt=""
+                  />
+                </div>
+                <h2>Mobile Applications</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloremque, quo!
+                </p>
+              </div>
+            </div>
+            <div id="service-row2">
+              <div class="services-tiles">
+                <div class="image" id="image4">
+                  <img
+                    src="img/287099_responsive_full width_ui_ux_web design_liquid_icon.png"
+                    alt=""
+                  />
+                </div>
+                <h2>RESPONSIVE DESIGN</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloremque, quo!
+                </p>
+              </div>
+              <div class="services-tiles">
+                <div class="image" id="image5">
+                  <img
+                    src="img/9264933_web design_development_writing_coding_icon.png"
+                    alt=""
+                  />
+                </div>
+                <h2>GRAPHIC DESIGN</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloremque, quo!
+                </p>
+              </div>
+              <div class="services-tiles">
+                <div class="image" id="image6">
+                  <img src="img/9845934_do_done_list_tasks_icon.png" alt="" />
+                </div>
+                <h2>MARKETING SERVICES</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloremque, quo!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

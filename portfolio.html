@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      #body {
+        height: 85%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #portfolio-body {
+        height: 100%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      #portfolio-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 10%;
+      }
+
+      #portfolio-nav ul {
+        height: 50%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #portfolio-nav li {
+        margin: 10px;
+        padding: 0;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 10%;
+      }
+      #portfolio-nav li:hover {
+        cursor: pointer;
+        color: burlywood;
+        /* background: blue; */
+      }
+      #portfolio-images {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      #portfolio-image-column {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 20px;
+      }
+      .portfolio-img1 {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 20px;
+        height: 100%;
+        width: 80%;
+      }
+      .portfolio-img2 {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 20px;
+        height: 100%;
+        width: 100%;
+      }
+      .portfolio-img3 {
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 20px;
+        height: 100%;
+        width: 90%;
+      }
+      .portfolio-img1:hover .portfolio-image-img,
+      .portfolio-img2:hover .portfolio-image-img,
+      .portfolio-img3:hover .portfolio-image-img {
+        opacity: 0.2;
+        transition: 0.5s;
+        transition-timing-function: ease-in-out;
+      }
+      .portfolio-img1:hover,
+      .portfolio-img2:hover,
+      .portfolio-img3:hover {
+        background-color: grey;
+        transition: 0.5s;
+        transition-timing-function: ease-in-out;
+      }
+      .portfolio-img1 img,
+      .portfolio-img2 img,
+      .portfolio-img3 img {
+        -webkit-user-select: none;
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+      }
+      .portfolio-image-text {
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        height: 50%;
+        width: 20%;
+      }
+
+      .portfolio-img1:hover .portfolio-image-text,
+      .portfolio-img2:hover .portfolio-image-text,
+      .portfolio-img3:hover .portfolio-image-text {
+        visibility: visible;
+        transition: 0.5s;
+        transition-timing-function: ease-in-out;
+      }
+      .portfolio-image-text strong {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: xx-large;
+        height: 20%;
+        width: 100%;
+      }
+      .portfolio-image-icons {
+        display: flex;
+        justify-content: space-evenly;
+        height: 20%;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+      }
+      .portfolio-image-icons img {
+        border-radius: 50px;
+        margin: 0px;
+        border: 0px;
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+      }
+      .portfolio-image-icons img:hover {
+        background-color: cadetblue;
+      }
+      .portfolio-image-icons1 {
+        display: flex;
+        justify-content: space-evenly;
+        height: 35%;
+        width: 120%;
+        margin: 0;
+        padding: 0;
+      }
+      .portfolio-image-icons1 img {
+        border-radius: 50px;
+        margin: 0px;
+        border: 0px;
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+      }
+      .portfolio-image-icons1 img:hover {
+        background-color: cadetblue;
+      }
+      .portfolio-web {
+        --status: "visible";
+      }
+      .portfolio-app {
+        --status: "visible";
+      }
+      .portfolio-card {
+        --status: "visible";
+      }
+      .portfolio-web-hide {
+        height: 0;
+        width: 0;
+      }
+      .portfolio-app-hide {
+        height: 0;
+        width: 0;
+      }
+      .portfolio-card-hide {
+        height: 0;
+        width: 0;
+      }
+      #navbar {
+        --status: visible;
+      }
+      #body {
+        --status: visible;
+      }
+      .portfolio-expand {
+        opacity: 0.2;
+      }
+      #portfolio-expand {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        height: 80%;
+        width: 80%;
+        top: 60px;
+        left: 150px;
+        visibility: hidden;
+      }
+      #portfolio-expand > img {
+        height: 100%;
+        width: 70%;
+      }
+      #portfolio-close {
+        cursor: pointer;
+        visibility: hidden;
+        background-color: aliceblue;
+        color: black;
+        border: 2px blue solid;
+        padding: 10px 20px 10px 20px;
+        position: absolute;
+        top: 35px;
+        right: 50px;
+        border-radius: 10px;
+      }
+      #portfolio-expand-text {
+        padding: 20px;
+        background: white;
+        color: black;
+        height: 100%;
+        width: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <nav id="navbar" class="">
+        <div id="logo">
+          <a href="#"
+            ><img
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.iDYXq3As-rn3ms_zQwQ-6gHaDj%26pid%3DApi&f=1&ipt=5bff6f9b2524e5851499135e2db9fd1f95d1033ce23e89f47698904254d0e9d4&ipo=images"
+              alt="Name/Logo"
+          /></a>
+        </div>
+        <div id="sites">
+          <ul>
+            <li><a href="project.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div id="close"><p>x</p></div>
+      </nav>
+      <div id="body" class="">
+        <div id="portfolio-body">
+          <h2>Portfolio</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat a
+            voluptate, at nam doloremque dolore commodi iusto aliquid
+            reprehenderit! Voluptate nihil facere dolorum laboriosam voluptates.
+          </p>
+          <div id="portfolio-nav">
+            <ul class="portfolio-options" onclick="portfolio_option(event)">
+              <li class="portfolio-option" value="all">All</li>
+              <li class="portfolio-option" value="app">App</li>
+              <li class="portfolio-option" value="web">Web</li>
+              <li class="portfolio-option" value="card">Card</li>
+            </ul>
+          </div>
+          <div id="portfolio-images">
+            <div id="portfolio-image-column">
+              <div class="portfolio-img1 portfolio-web">
+                <img
+                  class="portfolio-image-img"
+                  src="https://images.unsplash.com/photo-1599012307530-d163bd04ecab?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+                <div class="portfolio-image-text">
+                  <strong>Web 1</strong>
+                  <div class="portfolio-image-icons">
+                    <img
+                      src="img/5760391_add_create_new_plus_icon.png"
+                      alt=""
+                      value="https://images.unsplash.com/photo-1599012307530-d163bd04ecab?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      onclick="toggle()"
+                    />
+                    <img src="img/336987_link_icon.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-img1 portfolio-card">
+                <img
+                  class="portfolio-image-img"
+                  src="https://images.unsplash.com/photo-1510925758641-869d353cecc7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+                <div class="portfolio-image-text">
+                  <strong>card 3</strong>
+                  <div class="portfolio-image-icons">
+                    <img
+                      src="img/5760391_add_create_new_plus_icon.png"
+                      alt=""
+                      value="https://images.unsplash.com/photo-1510925758641-869d353cecc7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      onclick="toggle()"
+                    />
+                    <img src="img/336987_link_icon.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-img1 portfolio-app">
+                <img
+                  class="portfolio-image-img"
+                  src="https://images.unsplash.com/photo-1713181011089-b889a2761032?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+                <div class="portfolio-image-text">
+                  <strong>App 1</strong>
+                  <div class="portfolio-image-icons">
+                    <img
+                      src="img/5760391_add_create_new_plus_icon.png"
+                      alt=""
+                      value="https://images.unsplash.com/photo-1713181011089-b889a2761032?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      onclick="toggle()"
+                    />
+                    <img src="img/336987_link_icon.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="portfolio-image-column">
+              <div class="portfolio-img2 portfolio-card">
+                <img
+                  class="portfolio-image-img"
+                  src="https://images.unsplash.com/photo-1481437156560-3205f6a55735?q=80&w=1795&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+                <div class="portfolio-image-text">
+                  <strong>card 1</strong>
+                  <div class="portfolio-image-icons">
+                    <img
+                      src="img/5760391_add_create_new_plus_icon.png"
+                      alt=""
+                      value="https://images.unsplash.com/photo-1481437156560-3205f6a55735?q=80&w=1795&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      onclick="toggle()"
+                    />
+                    <img src="img/336987_link_icon.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-img2 portfolio-app">
+                <img
+                  class="portfolio-image-img"
+                  src="https://images.unsplash.com/photo-1713369982182-431fa22488d2?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+                <div class="portfolio-image-text">
+                  <strong>App 2</strong>
+                  <div class="portfolio-image-icons">
+                    <img
+                      src="img/5760391_add_create_new_plus_icon.png"
+                      alt=""
+                      value="https://images.unsplash.com/photo-1713369982182-431fa22488d2?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      onclick="toggle()"
+                    />
+                    <img src="img/336987_link_icon.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-img2 portfolio-web">
+                <img
+                  class="portfolio-image-img"
+                  src="https://images.unsplash.com/photo-1517492973030-a02d282206f7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+                <div class="portfolio-image-text">
+                  <strong>Web 2</strong>
+                  <div class="portfolio-image-icons">
+                    <img
+                      src="img/5760391_add_create_new_plus_icon.png"
+                      alt=""
+                      value="https://images.unsplash.com/photo-1517492973030-a02d282206f7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      onclick="toggle()"
+                    />
+                    <img src="img/336987_link_icon.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-img2 portfolio-app">
+                <img
+                  class="portfolio-image-img"
+                  src="https://images.unsplash.com/photo-1712926097966-b86f0d8c131d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+                <div class="portfolio-image-text">
+                  <strong>App 3</strong>
+                  <div class="portfolio-image-icons">
+                    <img
+                      src="img/5760391_add_create_new_plus_icon.png"
+                      alt=""
+                      value="https://images.unsplash.com/photo-1712926097966-b86f0d8c131d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      onclick="toggle()"
+                    />
+                    <img src="img/336987_link_icon.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="portfolio-image-column">
+              <div class="portfolio-img3 portfolio-card">
+                <img
+                  class="portfolio-image-img"
+                  src="https://images.unsplash.com/photo-1628558422453-576457df4b0d?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+                <div class="portfolio-image-text">
+                  <strong>card 2</strong>
+                  <div class="portfolio-image-icons1">
+                    <img
+                      src="img/5760391_add_create_new_plus_icon.png"
+                      alt=""
+                      value="https://images.unsplash.com/photo-1628558422453-576457df4b0d?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      onclick="toggle()"
+                    />
+                    <img src="img/336987_link_icon.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-img3 portfolio-web">
+                <img
+                  class="portfolio-image-img"
+                  src="https://images.unsplash.com/photo-1713330530691-110f37ef99ea?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+                <div class="portfolio-image-text">
+                  <strong>Web 3</strong>
+                  <div class="portfolio-image-icons1">
+                    <img
+                      src="img/5760391_add_create_new_plus_icon.png"
+                      alt=""
+                      value="https://images.unsplash.com/photo-1713330530691-110f37ef99ea?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      onclick="toggle()"
+                    />
+                    <img src="img/336987_link_icon.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-img3 portfolio-app">
+                <img
+                  class="portfolio-image-img"
+                  src="https://images.unsplash.com/photo-1712993923654-64fc6738f04d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+                <div class="portfolio-image-text">
+                  <strong>App 4</strong>
+                  <div class="portfolio-image-icons1">
+                    <img
+                      src="img/5760391_add_create_new_plus_icon.png"
+                      alt=""
+                      value="https://images.unsplash.com/photo-1712993923654-64fc6738f04d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      onclick="toggle()"
+                    />
+                    <img src="img/336987_link_icon.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="portfolio-close" onclick="portfolio_close()">X</div>
+    <div id="portfolio-expand">
+      <img
+        src="https://images.unsplash.com/photo-1599012307530-d163bd04ecab?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+      />
+      <div id="portfolio-expand-text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur neque
+        quisquam nemo laudantium nisi. Ab, quae atque! Explicabo, earum
+        consequatur?
+      </div>
+    </div>
+    <script>
+      const close = document.getElementById("close");
+      const body = document.getElementById("body");
+      close.addEventListener("click", () => {
+        const navbar = document.getElementById("navbar");
+        const sites = document.getElementById("sites");
+        var status = getComputedStyle(sites).getPropertyValue("--status");
+        if (status === "open") {
+          navbar.style.height = "5%";
+          sites.style.display = "none";
+          sites.style.setProperty("--status", "close");
+          body.style.height = "95%";
+        } else {
+          navbar.style.height = "15%";
+          sites.style.display = "flex";
+          sites.style.setProperty("--status", "open");
+          body.style.height = "85%";
+        }
+      });
+
+      function toggle() {
+        const navbar = document.getElementById("navbar");
+        const body = document.getElementById("body");
+        var status = window
+          .getComputedStyle(navbar)
+          .getPropertyValue("--status");
+        const portfolio_expand = document.getElementById("portfolio-expand");
+        const portfolio_close = document.getElementById("portfolio-close");
+        const portfolio_image_icons = document.querySelectorAll(
+          ".portfolio-image-icons img"
+        );
+        portfolio_image_icons.forEach(function (icon) {
+          icon.addEventListener("click", function () {
+            const value = this.getAttribute("value");
+            if (status === "visible") {
+              navbar.classList.add("portfolio-expand");
+              body.classList.add("portfolio-expand");
+              navbar.style.setProperty("--status", "close");
+              body.style.setProperty("--status", "close");
+              portfolio_expand.style.visibility = "visible";
+              portfolio_close.style.visibility = "visible";
+            }
+          });
+        });
+        const portfolio_image_icons1 = document.querySelectorAll(
+          ".portfolio-image-icons1 img"
+        );
+        portfolio_image_icons1.forEach(function (icon) {
+          icon.addEventListener("click", function () {
+            const value = this.getAttribute("value");
+            if (status === "visible") {
+              navbar.classList.add("portfolio-expand");
+              body.classList.add("portfolio-expand");
+              navbar.style.setProperty("--status", "close");
+              body.style.setProperty("--status", "close");
+              portfolio_expand.style.visibility = "visible";
+              portfolio_close.style.visibility = "visible";
+            }
+          });
+        });
+      }
+
+      function portfolio_close() {
+        const navbar = document.getElementById("navbar");
+        const body = document.getElementById("body");
+        var status = window
+          .getComputedStyle(navbar)
+          .getPropertyValue("--status");
+        const portfolio_expand = document.getElementById("portfolio-expand");
+        const portfolio_close = document.getElementById("portfolio-close");
+        if (status === "close") {
+          navbar.classList.remove("portfolio-expand");
+          body.classList.remove("portfolio-expand");
+          navbar.style.setProperty("--status", "visible");
+          body.style.setProperty("--status", "visible");
+          portfolio_expand.style.visibility = "hidden";
+          portfolio_close.style.visibility = "hidden";
+        }
+      }
+
+      function portfolio_option(event) {
+        let card = document.querySelectorAll(".portfolio-card");
+        let app = document.querySelectorAll(".portfolio-app");
+        let web = document.querySelectorAll(".portfolio-web");
+
+        let value = event.target.getAttribute("value");
+
+        if (value === "all") {
+          card.forEach((element) => {
+            element.style.setProperty("--status", "visible");
+            element.classList.remove("portfolio-card-hide");
+          });
+          app.forEach((element) => {
+            element.style.setProperty("--status", "visible");
+            element.classList.remove("portfolio-app-hide");
+          });
+          web.forEach((element) => {
+            element.style.setProperty("--status", "visible");
+            element.classList.remove("portfolio-web-hide");
+          });
+        } else if (value === "web") {
+          app.forEach((element) => {
+            element.style.setProperty("--status", "hidden");
+            element.classList.add("portfolio-app-hide");
+          });
+          card.forEach((element) => {
+            element.style.setProperty("--status", "hidden");
+            element.classList.add("portfolio-card-hide");
+          });
+          web.forEach((element) => {
+            element.style.setProperty("--status", "visible");
+            element.classList.remove("portfolio-web-hide");
+          });
+        } else if (value === "app") {
+          card.forEach((element) => {
+            element.style.setProperty("--status", "hidden");
+            element.classList.add("portfolio-card-hide");
+          });
+          web.forEach((element) => {
+            element.style.setProperty("--status", "hidden");
+            element.classList.add("portfolio-web-hide");
+          });
+          app.forEach((element) => {
+            element.style.setProperty("--status", "visible");
+            element.classList.remove("portfolio-app-hide");
+          });
+        } else if (value === "card") {
+          app.forEach((element) => {
+            element.style.setProperty("--status", "hidden");
+            element.classList.add("portfolio-app-hide");
+          });
+          web.forEach((element) => {
+            element.style.setProperty("--status", "hidden");
+            element.classList.add("portfolio-web-hide");
+          });
+          card.forEach((element) => {
+            element.style.setProperty("--status", "visible");
+            element.classList.remove("portfolio-card-hide");
+          });
+        }
+      }
+    </script>
+  </body>
+</html>

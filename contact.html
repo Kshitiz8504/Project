@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      #contact {
+        margin: 50px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+      }
+      #contact h1,
+      #contact #contact-p {
+        padding-left: 50px;
+      }
+      #contact-body {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #contact-no-input {
+        width: 90%;
+        display: flex;
+        justify-content: start;
+      }
+      #contact-left,
+      #contact-right {
+        width: 100%;
+      }
+      #contact-left ul,
+      #contact-right ul,
+      #contact-input ul {
+        color: black;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .resume-no-ip-content {
+        font-size: 15px;
+      }
+      #contact-input {
+        margin-top: 20px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #contact-input form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      form table {
+        width: 100%;
+      }
+      form td {
+        padding: 10px;
+      }
+      form input[type="text"],
+      form input[type="email"],
+      form textarea {
+        background-color: transparent;
+        border: 0;
+        outline: 1px seashell solid;
+        background: transparent;
+        padding: 10px;
+        margin: 0;
+        width: 100%;
+      }
+      form button {
+        margin: 10px;
+        height: 30px;
+        width: 100px;
+        border-radius: 5px;
+        border: 0;
+        outline: 1px cadetblue solid;
+        background: cadetblue;
+      }
+      form button:hover {
+        background-color: rgb(85, 128, 130);
+        box-shadow: -2px -2px rgb(85, 128, 130);
+        color: white;
+      }
+      #contact-img {
+        display: flex;
+        height: 80px;
+        width: 80px;
+      }
+      #contact-img a img:hover,
+      #contact-img a:hover {
+        background: cadetblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <nav id="navbar">
+        <div id="logo">
+          <a href="#"
+            ><img
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.iDYXq3As-rn3ms_zQwQ-6gHaDj%26pid%3DApi&f=1&ipt=5bff6f9b2524e5851499135e2db9fd1f95d1033ce23e89f47698904254d0e9d4&ipo=images"
+              alt="Name/Logo"
+          /></a>
+        </div>
+        <div id="sites">
+          <ul>
+            <li><a href="project.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div id="close"><p>x</p></div>
+      </nav>
+      <div id="body">
+        <div id="contact">
+          <h1>Contact</h1>
+          <p id="contact-p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
+            similique.
+          </p>
+          <div id="contact-body">
+            <div id="contact-no-input">
+              <div id="contact-left">
+                <ul>
+                  <li>
+                    <h3>My Address</h3>
+                    <p class="resume-no-ip-content">
+                      R-Block, Kissinger Street, Vellore, Tamil Nadu 642014
+                    </p>
+                  </li>
+                  <li>
+                    <h3>Email</h3>
+                    <p class="resume-no-ip-content">
+                      kshitijraj.2022@vitstudent.ac.in
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div id="contact-right">
+                <ul>
+                  <li>
+                    <h3>Social Profiles</h3>
+                    <div id="contact-img">
+                      <a href=""
+                        ><img
+                          src="img/5282541_fb_social media_facebook_facebook logo_social network_icon.png"
+                          alt=""
+                      /></a>
+                      <a href=""
+                        ><img
+                          src="img/5282542_linkedin_network_social network_linkedin logo_icon.png"
+                          alt=""
+                      /></a>
+                      <a href=""
+                        ><img
+                          src="img/5282544_camera_instagram_social media_social network_instagram logo_icon.png"
+                          alt=""
+                      /></a>
+                      <a href=""
+                        ><img
+                          src="img/5282546_chat_facebook_message_messenger_messenger logo_icon.png"
+                          alt=""
+                      /></a>
+                      <a href=""
+                        ><img
+                          src="img/5282551_tweet_twitter_twitter logo_icon.png"
+                          alt=""
+                      /></a>
+                      <a href=""><img src="" alt="" /></a>
+                    </div>
+                  </li>
+                  <li>
+                    <h3>Call</h3>
+                    <p class="resume-no-ip-content">+91 1234 5678 10</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="contact-input">
+              <form action="" method="#">
+                <table>
+                  <tr>
+                    <td>
+                      <input
+                        type="text"
+                        name="your-name"
+                        id="your-name"
+                        placeholder="Your Name"
+                        required
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="email"
+                        name="your-email"
+                        id="your-email"
+                        placeholder="Your Email"
+                        required
+                      />
+                    </td>
+                  </tr>
+                </table>
+                <table>
+                  <tr>
+                    <td>
+                      <input
+                        type="text"
+                        name="subject"
+                        id="your-subject"
+                        placeholder="Subject"
+                        required
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <textarea
+                        name="message"
+                        id="your-message"
+                        cols="20"
+                        rows="10"
+                        placeholder="Subject"
+                        required
+                      ></textarea>
+                    </td>
+                  </tr>
+                </table>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

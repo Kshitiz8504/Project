@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      html {
+        height: 100vh;
+        width: 100vw;
+        background-color: aliceblue;
+      }
+      * {
+        margin: 0;
+        color: white;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+      }
+      #body {
+        height: 85vh;
+        width: 100vw;
+        background: linear-gradient(135deg, black, gray);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #about-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #about-content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+      }
+      #about-pic {
+        margin-left: 10px;
+        border: 2px green solid;
+        width: 40%;
+      }
+      #about-pic img {
+        height: 100%;
+        width: 100%;
+      }
+      #about-text {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+      }
+      #about-table {
+        display: flex;
+        justify-content: center;
+      }
+
+      #right-about,
+      #left-about {
+        width: 100%;
+      }
+      #right-about ul,
+      #left-about ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: "> ";
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <nav id="navbar">
+        <div id="logo">
+          <a href="#"
+            ><img
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.iDYXq3As-rn3ms_zQwQ-6gHaDj%26pid%3DApi&f=1&ipt=5bff6f9b2524e5851499135e2db9fd1f95d1033ce23e89f47698904254d0e9d4&ipo=images"
+              alt="Name/Logo"
+          /></a>
+        </div>
+        <div id="sites">
+          <ul>
+            <li><a href="project.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div id="close"><p>x</p></div>
+      </nav>
+      <div id="body">
+        <div id="about-body">
+          <div id="heading">
+            <h1>About Me</h1>
+          </div>
+          <div id="about-content">
+            <div id="about-pic">
+              <img
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.aQvztH3rNT-QMNNeixa91QHaNK%26pid%3DApi&f=1&ipt=c95d90df5ea65afd499727611975be9bcce971c58ac415192d830dd617159f23&ipo=images"
+                alt=""
+              />
+            </div>
+            <div id="about-text">
+              <h2>Web Developer</h2>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <div id="about-table">
+                <div id="right-about">
+                  <ul>
+                    <li><b>Birthday:</b> 8 May 2004</li>
+                    <li><b>Website:</b> www.example.com</li>
+                    <li><b>Phone:</b> +91 456 7890</li>
+                    <li><b>City:</b> Vellore, Tamil Nadu</li>
+                  </ul>
+                </div>
+                <div id="left-about">
+                  <ul>
+                    <li><b>Age:</b> 19</li>
+                    <li><b>Degree:</b> Bachelors</li>
+                    <li><b>Email:</b> kshitijraj.2022@vitstudent.ac.in</li>
+                    <li><b>Freelance:</b> Available</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="after-about">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                nostrum id animi, quasi quibusdam amet consequatur expedita
+                consequuntur atque, praesentium, dicta sed? Assumenda facilis
+                recusandae fugit aliquam repellat eum soluta earum corporis
+                accusantium nulla tempora quos doloribus, dolorem eius nesciunt.
+                Dolorum expedita iste, vel ratione odio enim impedit minus,
+                culpa deserunt iure consequuntur molestiae eligendi illum. Cum
+                ad corrupti fugit harum. Ullam corporis ipsum quisquam dolore
+                sit fuga molestiae iusto. Sint cum expedita nulla ab. Odio
+                deleniti id distinctio tenetur, aut exercitationem ipsam iusto
+                eligendi ea enim neque quidem praesentium aspernatur laborum est
+                necessitatibus. Fugiat quas quisquam at dolorem aliquam.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
